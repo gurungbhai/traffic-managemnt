@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0" >
+<img src="/static/image/contact.jpg" class="d-block w-100" alt="...">
+<h1 class="text-center">  Contact Us </h1>
+</div>
+<div class="container" >
+
+<form method="post" action=/contact>
+{% csrf_token %}
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" class="form-control" id="name" name="Name" placeholder="Enter your Name">
+  </div>
+  <div class="form-group">
+    <label for="Email">Email address</label>
+    <input type="Email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+  </div>
+  <div class="form-group">
+    <label for="phone number">NUmber</label>
+    <input type="phone" class="form-control" id="number" name="number" placeholder="Enter your Number">
+  </div>
+  <div class="form-group">
+    <label for="desc">tell us about For want you  to contatc us.... </label>
+    <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+</form> 
+</div>
+<script type="text/javascript">
+            window.onload = function(){
+                /**
+                 * Just Make sure to return false so that your request will not go the server script
+                 */
+                document.getElementById('simple_form').onsubmit = function(){
+                    // After doing your logic that you want to do 
+
+                    return false 
+                }
+            }
+        </script>
+
+{% endblock body %}

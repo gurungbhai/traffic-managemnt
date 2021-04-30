@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock title %}
+
+
+
+{% block body %}
+<h1 class="text-center">  Register Form</h1>
+<div class="container" >
+<form method="post" action=/register>
+{% csrf_token %}
+  <div class="form-group">
+    <label for="Name">First Name:</label>
+    <input type="text" class="form-control" id="name" name="fName" placeholder="Enter your First Name"
+  </div>
+  <div class="form-group">
+    <label for="Name">last Name:</label>
+    <input type="text" class="form-control" id="name" name="lName" placeholder="Enter your last Name"
+  </div>
+   <div class="form-group">
+    <label for="user Name">UserName</label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your UserName">
+  </div>
+  <div class="form-group">
+    <label for="Email">Email address</label>
+    <input type="Email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+  </div>
+  <div class="form-group">
+    <label for="phone number">NUmber</label>
+    <input type="phone" class="form-control" id="number" name="number" placeholder="Enter your Number">
+  </div>
+ <div class="form-group">
+    <label for="Password">Password</label>
+    <input type="Password" class="form-control" id="number" name="Password1" placeholder="Enter your Password">
+  </div>
+  <div class="form-group">
+    <label for="Password">re-type</label>
+    <input type="Password" class="form-control" id="number" name="Password2" placeholder="re enter your Password">
+  </div>
+  <div class="form-group">
+    <label for="emergency vehicle ">emergency vehicle</label>
+    <input type="text" class="form-control" id="number" name="vehicle" placeholder="Enter emergency vehicle you Use">
+  </div>
+  
+  
+  <button class="btn btn-primary" type="submit">Register</button>
+  <div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Already have an account? <a href="/login" class="ml-2">Login</a>
+					</div>
+
+</form> 
+</div>
+{% endblock body %}
